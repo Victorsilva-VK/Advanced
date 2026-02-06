@@ -1,8 +1,12 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+// --- IMPORTAÇÕES DAS TELAS ---
 import HomeScreen from './src/screens/HomeScreen';
 import DetailsScreen from './src/screens/DetailsScreen';
+import VistoriaScreen from './src/screens/VistoriaScreen';
+import PreviewScreen from './src/screens/PreviewScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +24,17 @@ export default function App() {
           name="Detalhes" 
           component={DetailsScreen} 
           options={{ headerShown: false }} 
+        />
+
+        <Stack.Screen 
+          name="Vistoria" 
+          component={VistoriaScreen} 
+          options={{ headerShown: false }} // Câmera precisa ser tela cheia
+        />
+        <Stack.Screen 
+          name="Preview" 
+          component={PreviewScreen} 
+          options={{ title: 'Nova Vistoria' }} // Aqui pode ter cabeçalho
         />
       </Stack.Navigator>
     </NavigationContainer>

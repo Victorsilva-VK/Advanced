@@ -27,7 +27,7 @@ export default function DetailsScreen({ route, navigation }) {
         {/* Botão VISTORIA */}
         <TouchableOpacity 
           style={styles.bigButton} 
-          onPress={() => Alert.alert("Em breve", "Aqui abrirá a câmera!")}
+          onPress={() => navigation.navigate('Vistoria')}
         >
           <View style={[styles.iconCircle, { backgroundColor: '#e3f2fd' }]}>
             <Ionicons name="camera" size={32} color="#1565c0" />

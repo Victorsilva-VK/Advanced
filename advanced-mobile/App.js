@@ -7,6 +7,7 @@ import HomeScreen from './src/screens/HomeScreen';
 import DetailsScreen from './src/screens/DetailsScreen';
 import VistoriaScreen from './src/screens/VistoriaScreen';
 import PreviewScreen from './src/screens/PreviewScreen';
+import FinanceiroScreen from './src/screens/FinanceiroScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -35,6 +36,11 @@ export default function App() {
           name="Preview" 
           component={PreviewScreen} 
           options={{ title: 'Nova Vistoria' }} // Aqui pode ter cabeçalho
+        />
+        <Stack.Screen 
+          name="Financeiro" 
+          component={FinanceiroScreen} 
+          options={{ headerShown: false }} 
         />
       </Stack.Navigator>
     </NavigationContainer>

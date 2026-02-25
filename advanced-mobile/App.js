@@ -8,6 +8,7 @@ import DetailsScreen from './src/screens/DetailsScreen';
 import VistoriaScreen from './src/screens/VistoriaScreen';
 import PreviewScreen from './src/screens/PreviewScreen';
 import FinanceiroScreen from './src/screens/FinanceiroScreen';
+import NewObraScreen from './src/screens/NewObraScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +21,11 @@ export default function App() {
           name="Home" 
           component={HomeScreen} 
           options={{ headerShown: false }} // Esconde o cabeçalho padrão feio
+        />
+        <Stack.Screen 
+          name="NovaObra" 
+          component={NewObraScreen} 
+          options={{ title: 'Nova Obra' }} // Título personalizado para a tela de nova obra
         />
         <Stack.Screen 
           name="Detalhes" 

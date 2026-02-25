@@ -77,7 +77,7 @@ export default function HomeScreen({ navigation }) {
       {/* Botão Flutuante (FAB) */}
       <TouchableOpacity 
         style={styles.fab} 
-        onPress={() => Alert.alert("Em breve", "Vamos criar a tela de cadastro agora!")}
+        onPress={() => navigation.navigate('NovaObra')}
       >
         <Text style={styles.fabText}>+</Text>
       </TouchableOpacity>

@@ -38,7 +38,7 @@ export default function DetailsScreen({ route, navigation }) {
         {/* Botão FINANCEIRO */}
         <TouchableOpacity 
           style={styles.bigButton}
-          onPress={() => navigation.navigate('Financeiro')}
+          onPress={() => navigation.navigate('Financeiro', { obra: obra })}
         >
           <View style={[styles.iconCircle, { backgroundColor: '#e8f5e9' }]}>
             <Ionicons name="cash" size={32} color="#2e7d32" />

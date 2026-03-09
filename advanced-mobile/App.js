@@ -9,7 +9,7 @@ import VistoriaScreen from './src/screens/VistoriaScreen';
 import PreviewScreen from './src/screens/PreviewScreen';
 import FinanceiroScreen from './src/screens/FinanceiroScreen';
 import NewObraScreen from './src/screens/NewObraScreen';
-
+import NovaTransacaoScreen from './src/screens/NovaTransacaoScreen';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -32,7 +32,6 @@ export default function App() {
           component={DetailsScreen} 
           options={{ headerShown: false }} 
         />
-
         <Stack.Screen 
           name="Vistoria" 
           component={VistoriaScreen} 
@@ -47,6 +46,11 @@ export default function App() {
           name="Financeiro" 
           component={FinanceiroScreen} 
           options={{ headerShown: false }} 
+        />
+        <Stack.Screen 
+          name="NovaTransacao" 
+          component={NovaTransacaoScreen} 
+          options={{ title: 'Novo Lançamento' }} 
         />
       </Stack.Navigator>
     </NavigationContainer>

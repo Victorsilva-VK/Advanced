@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, View, Text, TouchableOpacity, SafeAreaView, Alert } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity, Alert } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 // Importamos ícones do pacote padrão do Expo
 import { Ionicons } from '@expo/vector-icons'; 
 
@@ -27,7 +28,7 @@ export default function DetailsScreen({ route, navigation }) {
         {/* Botão VISTORIA */}
         <TouchableOpacity 
           style={styles.bigButton} 
-          onPress={() => navigation.navigate('Vistoria')}
+          onPress={() => navigation.navigate('Vistoria', { obra: obra })}
         >
           <View style={[styles.iconCircle, { backgroundColor: '#e3f2fd' }]}>
             <Ionicons name="camera" size={32} color="#1565c0" />
